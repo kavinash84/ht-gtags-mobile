@@ -1,0 +1,12 @@
+@import "../../theme/_variables";
+
+.filterBlock {
+  margin-right: 0.625rem;
+  vertical-align: bottom;
+  width: 100%;
+  border-right: 1px solid #ddd;
+}
+.active {
+  color: $primary;
+  font-family: "medium";
+}

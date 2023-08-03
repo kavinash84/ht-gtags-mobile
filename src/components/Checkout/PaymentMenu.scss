@@ -1,0 +1,17 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.Container {
+  position: relative;
+  padding: 12px 5px 0;
+  margin-bottom: 0;
+  display: flex;
+  background-color: #FFF8F4;
+  &.overlap {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 100%;
+  }
+ 
+}

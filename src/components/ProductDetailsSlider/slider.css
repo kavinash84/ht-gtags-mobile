@@ -1,0 +1,14 @@
+.slick-dots {
+  /* margin-top: 15px; */
+  position: relative;
+  top: 30px;
+}
+.slick-dots li {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.slick-dots li.slick-active div {
+  border-top: 3px solid black !important;
+  margin-top: -1px;
+}

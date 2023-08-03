@@ -1,0 +1,76 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.otherMenuContainer {
+  position: relative;
+  padding: 12px 5px 0;
+  margin-bottom: 0;
+  display: flex;
+  background-color: #fff8f4;
+  &.overlap {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 100%;
+  }
+  .back {
+    button {
+      float: left;
+    }
+  }
+  .rightBLock {
+    a {
+      margin-left: 15px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child {
+        margin-left: 0;
+      }
+      @media (max-width: 320px) {
+        margin-left: 12px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  img {
+    // height: 26px;
+  }
+  .logo {
+    height: 13px;
+    margin-top: 8px;
+    padding-left: 10px;
+    max-width: 100%;
+  }
+  .cart {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    .count {
+      right: -7px !important;
+    }
+  }
+  .count {
+    position: absolute;
+    top: -6px;
+    right: -9px;
+    background-color: $primary;
+    color: $white;
+    padding: 0px 0px;
+    font-size: 12px;
+    width: 18px;
+    text-align: center;
+    height: 18px;
+    line-height: 1.5;
+    border-radius: 100%;
+  }
+  .searchBtn {
+    margin-right: -8px;
+  }
+}

@@ -1,0 +1,17 @@
+.reloadRibbion {
+  display: flex !important;
+  height: 38px;
+  transition: 1s height ease;
+  padding: 0 15px !important;
+  position: fixed !important;
+  width: 100%;
+  bottom: 0;
+  z-index: 16000003;
+  button {
+    &:hover {
+      svg {
+        fill: #000 !important;
+      }
+    }
+  }
+}

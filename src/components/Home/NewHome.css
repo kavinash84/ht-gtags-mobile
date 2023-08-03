@@ -1,0 +1,71 @@
+.example1 {
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+  background-color: #faf4f2;
+  display: flex;
+}
+.example1 h3 {
+  height: 16px;
+  margin: 0;
+  font-size: 14px;
+  border-left: 2px solid #f47020;
+  text-transform: capitalize;
+  margin: auto 8%;
+  padding-left: 10px;
+
+  /* Starting position */
+  /* -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%); */
+
+  /* Apply animation to this element */
+  /* -moz-animation: example1 15s linear infinite;
+  -webkit-animation: example1 15s linear infinite;
+  animation: example1 15s linear infinite; */
+}
+
+/* Move it (define the animation) */
+/* @-moz-keyframes example1 {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes example1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+} */
+/* @keyframes example1 {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%); 
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%); 
+    transform: translateX(-100%);
+  }
+} */
+
+.gradient {
+  background-image: linear-gradient(to bottom, white, #ffffff00);
+  -webkit-background-image: linear-gradient(to bottom, white, #ffffff00);
+  -moz-background-image: linear-gradient(to bottom, white, #ffffff00);
+  top: 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.gradient-sleep {
+  background-image: linear-gradient(to bottom, #ededed99, white);
+  -webkit-background-image: linear-gradient(to bottom, #ededed99, white);
+  -moz-background-image: linear-gradient(to bottom, #ededed99, white);
+}

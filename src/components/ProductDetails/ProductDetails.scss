@@ -1,0 +1,55 @@
+.sizeDD {
+  width: 100%;
+}
+.freebieProduct {
+  margin-right: 55px;
+  background: #fbfbfb;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: dashed 1px #d2d2d2;
+}
+.addToCartWrapper {
+  position: fixed !important;
+  bottom: 0;
+  background: #fff;
+  padding: 5px !important;
+  box-shadow: 0 -7px 14px -9px rgba(124, 122, 122, 0.5);
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 16000002;
+  button,
+  a {
+    width: 100%;
+  }
+}
+.prodZoomOverlayModal {
+  padding: 0;
+  z-index: 16000001;
+  height: calc(100vh - 50px);
+}
+.prodZoomModal {
+  padding: 0;
+  overflow: auto;
+  max-width: 1100px;
+}
+.closeBtn {
+  position: fixed;
+}
+
+.price {
+  font-weight: bold;
+  height: 35px;
+}
+
+.pricecut {
+  font-weight: bold;
+  text-decoration: line-through;
+  display: inline-block;
+}
+
+.hideh1InAddreview {
+  h1 {
+    display: none;
+  }
+}

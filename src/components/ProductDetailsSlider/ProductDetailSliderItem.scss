@@ -1,0 +1,59 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.pdSliderItem {
+  div {
+    @media (max-width: 320px) {
+      height: 300px !important;
+    }
+  }
+  img {
+    width: auto !important;
+    height: auto;
+    max-height: 360px;
+  }
+}
+.zoomIcon {
+  position: absolute;
+  left: calc(50% - 80px);
+  bottom: 30px;
+  z-index: 1;
+}
+.imageButton {
+  position: relative;
+}
+
+.prodDetailsSlider {
+  padding: 0.625rem !important;
+  display: flex !important;
+  ul {
+    padding-right: 0 !important;
+  }
+  li {
+    margin: 0 !important;
+    // padding: 10px;
+  }
+  .control-arrow {
+    top: calc(50% - 17px) !important;
+  }
+  .control-next {
+    right: 10px !important;
+  }
+  .control-prev {
+    left: 10px !important;
+  }
+  .slider-wrapper {
+  }
+  .slide {
+    img {
+      vertical-align: top;
+      margin: auto;
+    }
+  }
+  .slick-next {
+    right: 10px !important;
+  }
+  .slick-prev {
+    left: 10px !important;
+  }
+}

@@ -1,0 +1,20 @@
+.forgotWrapper {
+  background: #FAFAFA;
+  height: 100vh;
+  .imgWrapper {
+    position: relative;
+  }
+  .back {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .responseBlock {
+    text-align: center;
+    min-height: calc(435px - 2.5rem);
+    padding-top: 1rem;
+  }
+  .hide {
+    display: none;
+  }
+}

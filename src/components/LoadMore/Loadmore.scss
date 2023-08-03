@@ -1,0 +1,31 @@
+@-webkit-keyframes spin {
+  0%  {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+
+.loadMoreWrapper {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 1rem 0;
+  clear: both;
+  background: #f7f7f7;
+  button {
+    width: calc(50% - 30px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f98d29;
+    border-color: #f98d29;
+    height: 42px;
+    border-radius: 3px;
+    svg {
+      vertical-align: middle;
+      margin-left: 5px;
+      fill: #FFF;
+    }
+    .label {
+      vertical-align: middle;
+      color: #FFF;
+    }
+  }
+}

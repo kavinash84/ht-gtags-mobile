@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "ChillaxSemibold";
+  src: local("ChillaxSemibold"),
+    url("../../../static/fonts/Chillax-Semibold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+.mainSection {
+  background-color: #F6C743;
+  color: white;
+  font-family: ChillaxSemibold;
+  overflow-x: hidden;
+  padding: 10px 0px;
+}
+
+.divmain {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-width: 100%;
+}
+
+.news-message {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  animation: slide-left 20s linear infinite;
+  overflow: hidden;
+  padding: 5px 0px;
+}
+
+.marquee {
+  font-size: 1em;
+  font-weight: 100;
+  padding-left: 0.5em;
+}
+
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.titleText {
+  font-size: 12px !important;
+  text-align: center !important;
+  font-family: ChillaxSemibold !important;
+  line-height: 1.2rem !important;
+}

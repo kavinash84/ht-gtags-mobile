@@ -1,0 +1,114 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.filters {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform .3s ease;
+  overflow: scroll;
+  z-index: 1000;
+  transform: translate3d(-100vw, 0, 0);
+  &.hide {
+    transform: translate3d(-100vw, 0, 0);
+  }
+  &.show {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+  }
+  .filtersContainer {
+    max-width: 100vw;
+    background: #FAFBFC;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+.filtersList {
+  padding-bottom: 70px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .block {
+      margin-bottom: 10px;
+      background: #FFF;
+    }
+    li {
+      padding: 10px 12px;
+      line-height: 1.5;
+      clear: both;
+      @include border(1px,#ededed,'bottom');
+      &:last-child {
+        border: none !important;
+      }
+      button {
+        width: 100%;
+        color: $text;
+        font-size: 0.875rem;
+        opacity: 1;
+        text-align: left;
+        padding: 0;
+        line-height: 1.2;
+        span {
+          float: right;
+          font-size: 20px;
+          line-height: 0.8;
+          color: #757575;
+          transition: all 0.75s ease;
+          height: 20px;
+        }
+      }
+      ul {
+        transition: all 0.5s ease;
+        height: 0;
+        overflow: overlay;
+        display: none;
+        padding-top: 5px;
+        li {
+          border-bottom: none !important;
+          padding: 5px 15px;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+      &.active {
+        ul {
+          height: initial;
+          display: block;
+          overflow: hidden;
+        }
+        span {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+.closeIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+.arrowDown {
+  transform: rotate(90deg);
+  margin-left: 1rem;
+}
+.filtersBtn {
+  padding: .75rem !important;
+}
+.colorBox {
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  top: 1px;
+  border-radius: 100%;
+  margin-right: 0;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+}

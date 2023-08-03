@@ -1,0 +1,18 @@
+.loginWrapper {
+  background: #FAFAFA;
+  height: 100vh;
+  overflow: auto;
+  z-index: 16000002;
+  position: relative;
+  .imgWrapper {
+    position: relative;
+  }
+  .back {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+.socialLogin {
+  border-top: 1px solid #dddddd;
+}

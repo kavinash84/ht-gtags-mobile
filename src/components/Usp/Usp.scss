@@ -1,0 +1,20 @@
+.uspImg {
+  margin-bottom: 0.625rem;
+  &:before {
+    width: 1px;
+    height: 55px;
+    background: #dadada;
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+  }
+  &:last-child, &:nth-child(3n) {
+    &:before {
+      display: none;
+    }
+  }
+  h1 {
+
+  }
+}

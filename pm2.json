@@ -1,0 +1,58 @@
+{
+  "apps" : [{
+    "name"       : "hometown-mobile",
+    "script"     : "./bin/server.js",
+    "instances"  : "max",
+    "exec_mode"  : "cluster",
+    "wait_ready" : true,
+    "listen_timeout": 15000,
+    "env": {
+      "NODE_ENV": "production",
+      "SF_ENV": "production",
+      "UNBXD": "production",
+      "PORT": 8080,
+      "NODE_PATH": "src",
+      "APIHOST": "api.hometown.in/api/",
+      "APIPORT": 443,
+      "SITE_URL": "https://m.hometown.in",
+      "PAYMENT_URL": "https://alice.hometown.in/checkout/finish/payment/",
+      "TZ": "Asia/Kolkata"
+    },
+    "env_production": {
+      "NODE_ENV": "production",
+      "SF_ENV": "production",
+      "UNBXD": "production",
+      "PORT": 8080,
+      "NODE_PATH": "src",
+      "APIHOST": "api.hometown.in/api/",
+      "APIPORT": 443,
+      "SITE_URL": "https://m.hometown.in",
+      "PAYMENT_URL": "https://alice.hometown.in/checkout/finish/payment/",
+      "TZ": "Asia/Kolkata"
+    },
+    "env_beta": {
+      "NODE_ENV": "production",
+      "SF_ENV": "beta",
+      "UNBXD": "beta",
+      "PORT": 8080,
+      "NODE_PATH": "src", 
+      "APIHOST": "beta-api.hometown.in/api/",
+      "APIPORT": 443,
+      "SITE_URL": "https://beta-m.hometown.in",
+      "PAYMENT_URL": "https://beta-alice.hometown.in/checkout/finish/payment/",
+      "TZ": "Asia/Kolkata"
+    },
+    "env_stage": {
+      "NODE_ENV": "production",
+      "SF_ENV": "stage",
+      "UNBXD": "stage",
+      "PORT": 8080,
+      "NODE_PATH": "src",
+      "APIHOST": "stage-api.hometown.in/api/",
+      "APIPORT": 443,
+      "SITE_URL": "https://stage-m.hometown.in",
+      "PAYMENT_URL": "https://stage-alice.hometown.in/checkout/finish/payment/",
+      "TZ": "Asia/Kolkata"
+    }
+  }]
+}

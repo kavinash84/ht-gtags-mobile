@@ -1,0 +1,123 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.prodSliderItemWithOutDetails {
+  position: relative;
+  .content {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    left: 5px;
+    width: calc(100% - 10px);
+    padding: 0 10px;
+  }
+}
+.content {
+  text-align: left;
+  .priceWrapper {
+    margin-bottom: 4px;
+    span {
+      margin-right: 10px;
+    }
+  }
+  .title {
+    @include font-family("light");
+    @include font-size(0.875rem);
+    line-height: 1.6;
+    margin: 8px 0 7px;
+  }
+  .discPrice {
+    @include font-size(1rem);
+    @include font-family("regular");
+    color: $text-dark;
+  }
+  .price {
+    color: rgba(0, 0, 0, 0.4);
+    @include font-size(0.875rem);
+    text-decoration: line-through;
+    font-family: regular;
+  }
+  .saving {
+    @extend .price;
+    text-decoration: none;
+  }
+  .rating {
+    @include font-size(0.8rem);
+    color: $text-light;
+    margin-bottom: 4px;
+    position: relative;
+    &:before {
+      content: "★ ";
+      width: 1em;
+      // text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+      color: $primary;
+      @include font-size(1rem);
+      margin-right: 2px;
+    }
+  }
+  .tags {
+    color: $secondary;
+    @include font-size(0.9rem);
+  }
+}
+.link {
+  display: block;
+}
+.prodSliderItem {
+  .title {
+    @include font-size(1rem);
+  }
+  img {
+    margin-bottom: 5px;
+  }
+}
+.ratingWithDetails {
+  position: absolute;
+  left: 7px;
+  bottom: 10px;
+  margin-left: 0;
+}
+.priceOff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #d80019;
+}
+
+.prodSlider {
+  padding: 0 !important;
+  ul {
+    padding-right: 0 !important;
+  }
+  li {
+    margin: 0 !important;
+    @media (max-width: 320px) {
+      padding: 0 15px;
+    }
+  }
+  .control-arrow {
+    top: calc(50% - 60px) !important;
+  }
+  .carousel {
+    .control-prev {
+      left: 20px;
+    }
+    .control-next {
+      right: 20px;
+    }
+  }
+}
+
+.homeSlider {
+  .control-arrow {
+    top: calc(50% - 21px) !important;
+  }
+  .control-next {
+    right: 15px !important;
+  }
+  .control-prev {
+    left: 15px !important;
+  }
+}

@@ -1,0 +1,141 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.newCaseWrapper {
+  margin: -1.2rem;
+  border-radius: 1px;
+  background-color: $white;
+  box-shadow: 1px 1px 10px -1px rgba(124, 122, 122, 0.3);
+  .imgWrapper {
+    position: relative;
+  }
+  .back {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .formBlock {
+    min-height: calc(435px - 2.5rem);
+    &.forgotForm {
+      form {
+        top: 7rem;
+        position: relative;
+      }
+    }
+    &.resetForm {
+      form {
+        top: 5rem;
+        position: relative;
+      }
+    }
+  }
+  .responseBlock {
+    text-align: center;
+    min-height: calc(435px - 2.5rem);
+    padding-top: 2.5rem;
+    .content {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}
+.loginModal {
+  min-height: 599px;
+}
+.trackingWrapper {
+  // width: 1170px;
+  max-height: 90vh;
+  padding: 15px 15px 3px;
+  margin: 0 auto;
+  border-radius: 1px;
+  background-color: $white;
+  box-shadow: 1px 1px 10px -1px rgba(124, 122, 122, 0.3);
+  .imgWrapper {
+    position: relative;
+  }
+  .back {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .formBlock {
+    min-height: calc(435px - 2.5rem);
+    &.forgotForm {
+      form {
+        top: 7rem;
+        position: relative;
+      }
+    }
+    &.resetForm {
+      form {
+        top: 5rem;
+        position: relative;
+      }
+    }
+  }
+  .responseBlock {
+    text-align: center;
+    min-height: calc(435px - 2.5rem);
+    padding-top: 2.5rem;
+    .content {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}
+.loginModal {
+  min-height: 599px;
+}
+/* Timeline */
+.blockWrapper {
+  border-bottom: 1px solid #ddd;
+}
+.timeline {
+  margin-top: 20px;
+  .trackBlock {
+    .round {
+      transition: background .25s ease-in;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      cursor: pointer;
+      // background: #e0e0e0;
+    }
+    .line {
+      width: 32px;
+      margin-left: -8px;
+      margin-top: -43px;
+      height: 2px;
+      background: #e0e0e0;
+      transform: rotate(90deg);
+    }
+    .stepText {
+      // transform: translateX(-45%) translateY(0);
+      // text-align: center;
+      margin-top: -2px;
+      margin-left: 25px;
+    }
+    &.active {
+      // .round {
+      //   background: #388e3c;
+      // }
+      .line {
+        background: #388e3c;
+      }
+    }
+    &:first-child {
+      .line {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.categoryBar {
+  width: 100%;
+  display: inline-block;
+}
+.categoryBlock {
+  border: solid 1px transparent;
+  width: calc(100% / 8);
+  &.active,
+  &:hover {
+    background-image: linear-gradient(to top, #fff0e6, white, transparent);
+    border-bottom: 2px solid #f47020;
+  }
+}
+
+.active {
+  background-image: linear-gradient(to top, #fff0e6, white, transparent);
+  border-bottom: 2px solid #f47020;
+}

@@ -1,0 +1,44 @@
+@import "../../theme/_variables";
+@import "../../theme/_mixins";
+
+.headerLink {
+  color: #000;
+  font-family: regular;
+  font-size: 0.825rem;
+  text-transform: capitalize;
+}
+.breadCrumbList {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding-right: 4px;
+    padding-left: 20px;
+    line-height: 1;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:after {
+      content: '>';
+      position: absolute;
+      right: -13px;
+      font-size: 14px;
+      height: 14px;
+      line-height: 1.2;
+      top: -1px;
+    }
+    &:last-child {
+      pointer-events: none;
+      &:after {
+        display: none;
+      }
+    }
+    a {
+      color: rgba(7, 7, 7, 0.75);
+      font-size: 0.75em;
+      //text-transform: uppercase;
+    }
+  }
+}

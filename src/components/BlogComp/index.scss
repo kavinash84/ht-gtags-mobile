@@ -1,0 +1,122 @@
+.blogs_main {
+  width: 100%;
+
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+
+  .categorycontainer {
+    width: 100%;
+    padding: 2% 5%;
+
+    .categorylist {
+      width: 106%;
+      list-style: none;
+      display: flex;
+      color: #323131;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      li {
+        padding: 13px 16px;
+        cursor: pointer;
+      }
+
+      .activeTab {
+        background-image: linear-gradient(white, bisque);
+        border-bottom: 2px solid #f47020;
+        font-weight: 400;
+      }
+    }
+
+    .posts {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .post {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+
+        .image_container {
+          min-height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .image {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .title {
+          margin: 10px 0px;
+          color: #323f38;
+          font-size: 15px;
+        }
+
+        .date {
+          color: #323f38;
+          font-size: 12px;
+        }
+      }
+    }
+    .showMoreContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-weight: 600;
+      padding-top: 20px;
+      padding-bottom: 35px;
+      span {
+        cursor: pointer;
+      }
+      img {
+        margin-left: 10px;
+        width: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+  .postBanner {
+    background: #fff8f4;
+    width: 100%;
+    padding-bottom: 13%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .descriptionContainer {
+    padding: 0% 5%;
+    .description {
+      box-shadow: 0px 3px 6px #00000029;
+      padding: 30px;
+      z-index: 1;
+      position: absolute;
+      margin-top: -28px;
+      background-color: white;
+      position: absolute;
+      width: 90%;
+      .title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        color: #323131;
+        margin-bottom: 15px;
+      }
+      .date {
+        text-align: center;
+        color: #323f38;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

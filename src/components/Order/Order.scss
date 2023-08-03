@@ -1,0 +1,40 @@
+.PriceSummary_container {
+      padding: 10px;
+      background-color: #ffffff;
+      margin:-15px 0px;
+      .PriceSummary {
+        background-color: #f7f7f7;
+        margin: 15px 0px;
+        border-radius: 8px;
+        padding: 5px 15px;
+        .individualPrice {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0px;
+          .price_label {
+            font-size: 14px;
+            color: #666666;
+            margin-left: 5px;
+          }
+          .price {
+            font-size: 14px;
+            color: black;
+            font-weight: 600;
+          }
+        }
+        .divider {
+          border: 1px solid #e7e7e7;
+        }
+      }
+      .price1{
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+      }
+      .price_label1 {
+        font-size: 16px;
+        color: #666666;
+        margin-left: 5px;
+      }
+    }

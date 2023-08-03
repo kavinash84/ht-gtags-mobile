@@ -1,0 +1,38 @@
+.loginBtn {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.loginWith {
+  margin: 10px 0 15px;
+  &:after {
+    border-top: 1px solid #979797;
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 23px;
+    z-index: 0;
+  }
+  label {
+    z-index: 3;
+    position: relative;
+    background: #FFF;
+    padding: 10px 20px;
+    font-size: 1.25em;
+  }
+}
+.socialBtn {
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+  padding: 10px 25px;
+  background: transparent;
+  border: none;
+}
+.btn {
+  color: #f5a623;
+  font-size: 1.5rem;
+}
+.block {
+  border-right: 1px solid #666565;
+}

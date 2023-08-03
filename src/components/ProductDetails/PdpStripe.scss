@@ -1,0 +1,23 @@
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.dots {
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  border: none;
+  border-top: 1px dashed rgb(200, 193, 193);
+  color: #fff;
+  background-color: #fff;
+}
+
+.useflex {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}

@@ -1,0 +1,77 @@
+import React from 'react';
+import Div from 'hometown-components/lib/Div';
+import Text from 'hometown-components/lib/Text';
+import Img from 'hometown-components/lib/Img';
+import Heading from 'hometown-components/lib/Heading';
+import { connect } from 'react-redux';
+
+const styles = require('./ModularKitchen.scss');
+
+@connect(({ modularWardrobe }) => ({
+    modularWardrobe,
+    whyChoose: modularWardrobe.data.items.text.whyChoose
+  }))
+
+ export default class WhyChoose extends React.Component {
+      render() { 
+        const { whyChoose } = this.props;
+          return (
+            <Div mt="30px" mb="30px">
+            <Div>
+              <Img data-src={whyChoose.image} src={`${whyChoose.image}?blur=30`} alt={whyChoose.title} />
+            </Div>
+            <Div style={{ display: 'flex' }}>
+              <Div
+                style={{
+                  width: '85%',
+                  margin: 'auto',
+                  boxShadow: '0px 15px 30px #00000029',
+                  backgroundColor: '#FFFFFF',
+                  marginTop: '-50px'
+                }}
+              >
+                <Heading
+                  pt="15px"
+                  color="##222222"
+                  fontSize="22px"
+                  ta="center"
+                  fontWeight="bold"
+                  style={{
+                    lineHeight: '31px'
+                  }}
+                  mb="10px"
+                >
+                  {whyChoose.title}
+                </Heading>
+                <Text color="#888888" fontSize="14px" ta="center" pl="20px" pr="20px" mb="30px" style={{ lineHeight: '24px' }}>
+                  {whyChoose.description}
+                </Text>
+                <Div style={{ display: 'flex' }}>
+                  <Div
+                    className={styles.gradient}
+                    style={{
+                      width: '90%',
+                      margin: 'auto'
+                    }}
+                    p="0px 20px 15px"
+                  >
+                    {whyChoose.values.map((val, index) => (
+                      <Text fontSize="16px" p="10px 0px" key={index} style={{ fontWeight: 'bold' }}>
+                        {val.text.split(' ')[0]}{' '}
+                        <span style={{ fontWeight: 'normal' }}>
+                          {val.text
+                            .split(' ')
+                            .slice(1, val.text.split(' ').length)
+                            .join(' ')}
+                        </span>
+                      </Text>
+                    ))}
+                  </Div>
+                </Div>
+              </Div>
+            </Div>
+          </Div>
+          );
+      }
+  }
+   

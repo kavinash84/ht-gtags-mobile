@@ -1,0 +1,54 @@
+@import "../../theme/_variables";
+
+.emiOverlayModal {
+  z-index: 16000002;
+}
+.emiModal {
+  min-width: 100%;
+  padding: 0;
+  background: #edede5;
+  margin-top: 0;
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+.emiModalWrapper {
+  .tableHead {
+    background: #313131;
+    color: #FFF;
+  }
+  .tableWrapper {
+    overflow: auto;
+  }
+  .bankImgWrapper {
+    width: 100px;
+  }
+  .bflImgWrapper {
+    width: 80px;
+  }
+  table {
+    .coloumn {
+      background: #FFF;
+      background: #FFF;
+      border-top: 7px solid #edede5;
+      border-bottom: 7px solid #edede5;
+    }
+    td, th {
+      padding: 10px;
+      text-align: left;
+      min-width: 140px;
+    }
+    th {
+      font-size: 16px;
+      white-space: nowrap;
+      font-family: medium;
+    }
+    td {
+      font-size: 14px;
+      p {
+        margin-bottom: 0.3125rem;
+        margin-top: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}

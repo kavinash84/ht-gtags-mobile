@@ -1,0 +1,18 @@
+@import "../../theme/_variables";
+
+.staticPageWrapper {
+  a {
+    color: $primary;
+  }
+}
+.collposeBlock {
+  .collopseHeading {
+    cursor: pointer;
+    button {
+      text-align: left;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+  }
+}

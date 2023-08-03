@@ -1,0 +1,16 @@
+.prodInlineBlockWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: #FFF;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.10);
+}
+.PaymentSuccessTotal {
+  td {
+    padding: 3px 5px;
+    font-size: 0.875rem;
+  }
+}
