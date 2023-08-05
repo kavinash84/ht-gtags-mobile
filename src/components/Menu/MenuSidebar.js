@@ -20,7 +20,8 @@ import {
   CART_URL,
   MY_ORDERS_URL,
   MY_CASES_URL,
-  SEARCH_URL
+  SEARCH_URL,
+  DELIVERY_ADDRESS_URL
 } from "helpers/Constants";
 import Logout from "components/Logout";
 import { getUserName } from "selectors/userprofile";
@@ -58,6 +59,8 @@ const navigateToCategory = history => category => {
     wishListCount: wishlist.data.length,
     menu: homepage.menu.data,
     cartCount: getCartCount(cart),
+    cartItems: cart.data,
+    cartSummary: cart.summary,
     selectedPincode: pincode.selectedPincode,
     router
   }),
@@ -179,9 +182,12 @@ export default class MenuSidebar extends Component {
       backBtn,
       type,
       link,
+      cartItems,
       hideright,
-      logoShow
+      logoShow,
+      cartSummary
     } = this.props;
+    console.log(this.props);
     const styles = require("./MenuSidebar.scss");
 
     return (
@@ -278,7 +284,50 @@ export default class MenuSidebar extends Component {
                     {isLoggedIn ? wishListCount : 0}
                   </span>
                 </Link>
-                <Link className={styles.cart} to={CART_URL}>
+                <Link className={styles.cart} to={CART_URL}
+                onClick={()=>{
+                  window.dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
+                  window.dataLayer.push({
+                    "event": "begin_checkout",
+                   "pagetype": "",
+                    'source_page_url': window.location.href,
+                    'previous_page_url': "",
+                    'destination_page_url': DELIVERY_ADDRESS_URL,
+                    'login_status': "",
+                    'user_id': "",
+                    'page_url': window.location.href,
+                    'banner_id': "",
+                    'click_text': "CHECKOUT NOW",
+                    ecommerce: {
+                    currency: "INR",
+                    value: this.props.cartSummary.total,
+                    items: this.props.cartItems.map((result,idx)=>{
+                      return  {
+                        item_id: result.product_info.product_id,
+                        item_name: result.product_info.name,
+                        affiliation: "",
+                        coupon: result.coupon_code,
+                        discount: result.product_info.discount,
+                        index: idx,
+                        item_brand: result.product_info.brand,
+                        item_category: "",
+                        item_category2: "",
+                        item_category3: "",
+                        item_category4: "",
+                        item_category5: "",
+                        item_list_id: "",
+                        item_list_name: "",
+                        item_variant: result.product_info.color,
+                        location_id: "",
+                        price: result.product_info.net_price,
+                        quantity: result.qty
+                        };
+                    })
+                  }
+                   });
+
+                }}
+                >
                   <Img src={CartIcon} alt="Cart" height="22px" width="22px" />
                   <span className={styles.count}>{cartCount}</span>
                 </Link>

@@ -53,7 +53,22 @@ const BreadCrumb = ({ urlKey, name }) => {
             });
           }}
         >
-          <Link itemProp="item" to={`/${formatLink(link)}`}>
+          <Link itemProp="item" to={`/${formatLink(link)}`}
+           onClick={()=> {
+              window.dataLayer.push({
+                event: "pt_global_click_text_breadcrumb",
+                pagetype: "",
+                source_page_url: window.location.href,
+                previous_page_url: "",
+                destination_page_url: formatLink(link),
+                login_status: "",
+                user_id: "",
+                page_url: window.location.href,
+                banner_id: "",
+                click_text: name
+              });
+            }}
+          >
             <span itemProp="name" style={{ color: '#F47020', marginBottom: '2px' }}>
               {name}
             </span>
