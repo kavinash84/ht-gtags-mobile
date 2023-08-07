@@ -19,7 +19,21 @@ class SliderItem extends React.Component {
           title={title}
           target={target}
           rel="noopener noreferrer"
-          onClick={onClick}
+          onClick={(e)=>{
+            onClick(e);
+            window.dataLayer.push({
+              event: 'pt_global_click_link_banner_click',
+              pagetype: '',
+              source_page_url: window.location.href,
+              previous_page_url: '',
+              destination_page_url: "",
+              login_status: '',
+              user_id: '',
+              page_url: window.location.href,
+              banner_id: '',
+              click_text: title
+            });
+          }}
         >
           <img data-src={image} src={`${image}?blur=30`} alt={title} width='100%' height='220px' />
         </a>
@@ -30,7 +44,19 @@ class SliderItem extends React.Component {
         to={url}
         onClick={() => {
           sessionStorage.setItem("Bannerscroll", window.pageYOffset);
-          onClick();
+          onClick(e);
+      window.dataLayer.push({
+        event: 'pt_global_click_link_banner_click',
+        pagetype: '',
+        source_page_url: window.location.href,
+        previous_page_url: '',
+        destination_page_url:url,
+        login_status: '',
+        user_id: '',
+        page_url: window.location.href,
+        banner_id: '',
+        click_text: title
+      });
         }}
       >
         <img data-src={image} src={`${image}?blur=30`} alt={title} width='100%' height='220px' />

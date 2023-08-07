@@ -38,6 +38,52 @@ const PaymentSuccess = ({
   }
 }) => {
   if (isLoaded && !error && shipping_address) {
+
+    window.dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
+    window.dataLayer.push({
+      event: "purchase",
+     "pagetype": "",
+      'source_page_url': window.location.href,
+      'previous_page_url': "",
+      'destination_page_url': "",
+      'login_status': "",
+      'user_id': "",
+      'page_url': window.location.href,
+      'banner_id': "",
+      'click_text': "",
+      ecommerce: {
+      transaction_id: order_no,
+      value: sub_total_amount,
+      tax: "",
+      shipping: "",
+      currency: "INR",
+      coupon: "",
+      items: cart_products.map((product,index)=>{
+        return {
+          item_id: product.confSku,
+          item_name: product.name,
+          affiliation: "",
+          coupon: "",
+          discount: discount,
+          index: index,
+          item_brand: product.brand,
+          item_category: "",
+          item_category2: "",
+          item_category3: "",
+          item_category4: "",
+          item_category5: "",
+          item_list_id: product.sku,
+          item_list_name: product.name,
+          item_variant: product.color,
+          location_id: "",
+          price: product.price,
+          quantity: product.qty
+          };
+      })
+      }
+     });
+
+
     return (
       <Div type="block">
         <Container type="container" pr="0" pl="0">

@@ -18,7 +18,21 @@ const SliderItem = ({
         title={title}
         rel="noopener noreferrer"
         as="a"
-        onClick={onImageClick}
+         onClick={(e)=>{
+          onImageClick(e);
+          window.dataLayer.push({
+            event: 'pt_global_click_link_banner_click',
+            pagetype: '',
+            source_page_url: window.location.href,
+            previous_page_url: '',
+            destination_page_url: "",
+            login_status: '',
+            user_id: '',
+            page_url: window.location.href,
+            banner_id: '',
+            click_text: title
+          });
+        }}
       >
         <img
           fetchpriority="high"
@@ -36,7 +50,21 @@ const SliderItem = ({
         title={title}
         target={target}
         rel="noopener noreferrer"
-        onClick={onClick}
+        onClick={(e)=>{
+          onClick(e);
+          window.dataLayer.push({
+            event: 'pt_global_click_link_banner_click',
+            pagetype: '',
+            source_page_url: window.location.href,
+            previous_page_url: '',
+            destination_page_url: "",
+            login_status: '',
+            user_id: '',
+            page_url: window.location.href,
+            banner_id: '',
+            click_text: title
+          });
+        }}
         as="a"
       >
         <img
@@ -50,7 +78,21 @@ const SliderItem = ({
     );
   }
   return (
-    <Link to={url} onClick={onClick}>
+    <Link to={url}  onClick={(e)=>{
+      onClick(e);
+      window.dataLayer.push({
+        event: 'pt_global_click_link_banner_click',
+        pagetype: '',
+        source_page_url: window.location.href,
+        previous_page_url: '',
+        destination_page_url:url,
+        login_status: '',
+        user_id: '',
+        page_url: window.location.href,
+        banner_id: '',
+        click_text: title
+      });
+    }}>
       <img
         fetchpriority="high"
         data-src={image}

@@ -380,7 +380,7 @@ export default class Home extends Component {
             user_id: '',
             page_url: window.location.href,
             banner_id: '',
-            click_text: subHeading
+            click_text: ''
           })
      
             }}

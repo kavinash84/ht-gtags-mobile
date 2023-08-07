@@ -45,6 +45,7 @@ class MainSlider2 extends Component {
               onClick={() => {
                 weBannerImpression(slide.weData);
                 triggerSlideClick(index);
+                
               }}
             />
           </div>

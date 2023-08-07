@@ -21,7 +21,22 @@ const Matteress = ({ src, alt, url_key , categoryName}) => {
             <div style={{ width: '30px', borderTop: '2px solid #222222', margin: 'auto' }} />
           </Div>
 
-      <Link to={url_key}>
+      <Link to={url_key}
+      onClick={()=>{
+        window.dataLayer.push({
+          event: 'pt_global_click_link_banner_click',
+          pagetype: '',
+          source_page_url: window.location.href,
+          previous_page_url: '',
+          destination_page_url: url_key,
+          login_status: '',
+          user_id: '',
+          page_url: window.location.href,
+          banner_id: '',
+          click_text: ""
+        });
+      }}
+      >
         <img data-src={src} src={`${src}?blur=30`} alt={alt} style={{ width: '80%' , marginLeft:'10%', height: '250px' }} />
       </Link>
       <div

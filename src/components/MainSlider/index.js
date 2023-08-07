@@ -51,6 +51,18 @@ class MainSlider extends Component {
                 onClick={() => {
                   weBannerImpression(slide.weData);
                   triggerSlideClick(index);
+                  window.dataLayer.push({
+                    event: 'pt_global_click_link_banner_click',
+                    pagetype: '',
+                    source_page_url: window.location.href,
+                    previous_page_url: '',
+                    destination_page_url: slide.target_url||"",
+                    login_status: '',
+                    user_id: '',
+                    page_url: window.location.href,
+                    banner_id: '',
+                    click_text: ''
+                  });
                 }}
                 onImageClick={onImageClick}
                 index

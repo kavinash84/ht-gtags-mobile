@@ -314,7 +314,7 @@ class PaymentOptions extends Component {
                 {' '}
                 Rs.{total ? formatAmount(total) : null}
               </Label>
-              <Button
+              <div
                 onClick={() => {
                   window.dataLayer.push({ ecommerce: null });
                   window.dataLayer.push({
@@ -358,6 +358,8 @@ class PaymentOptions extends Component {
                     }
                   });
                 }}
+              >
+              <Button
                 size="block"
                 btnType="primary"
                 fontWeight="400"
@@ -368,6 +370,7 @@ class PaymentOptions extends Component {
                   backgroundColor: 'white',
                   border: '1px solid #F47020'
                 }}
+                
                 // onClick={nextStep(history)}
                 onClick={nextStep(
                   submitDetails,
@@ -389,11 +392,12 @@ class PaymentOptions extends Component {
                   (submitted && error === null)
                 }
               >
-                {submitting && (
-                  <Img mr="10px" className="spin" src={LoaderIcon} display="inline" width="20px" va="sub" />
-                )}
-                {submitting ? 'Please wait...' : 'Place Order'}
+                  {submitting && (
+                    <Img mr="10px" className="spin" src={LoaderIcon} display="inline" width="20px" va="sub" />
+                  )}
+                  {submitting ? 'Please wait...' : 'Place Order'}
               </Button>
+              </div>
             </Div>
           </Div>
         ) : null}

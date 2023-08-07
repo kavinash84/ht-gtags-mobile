@@ -49,7 +49,21 @@ class MainFurnitureSlider extends Component {
               image={slide.m_image || slide.image}
               url={slide.url_key}
               title={slide.title || ""}
-              onClick={() => triggerSlideClick(index)}
+              onClick={() => {
+                triggerSlideClick(index);
+                window.dataLayer.push({
+                  event: 'pt_global_click_link_banner_click',
+                  pagetype: '',
+                  source_page_url: window.location.href,
+                  previous_page_url: '',
+                  destination_page_url: slide.url_key,
+                  login_status: '',
+                  user_id: '',
+                  page_url: window.location.href,
+                  banner_id: '',
+                  click_text: slide.title || ""
+                });
+              }}
             />
           </div>
         ))}

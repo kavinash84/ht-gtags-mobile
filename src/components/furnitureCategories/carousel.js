@@ -29,7 +29,11 @@ const CategoryCarousel = ({ data, categoryName, settings, styles, component }) =
       ) : (
         <div>
           {categoryName ? (
-            <Div mb="25px" mt="25px">
+            <Div mb="25px" mt="25px"
+            onClick={(e)=>{
+              
+            }}
+            >
               <Heading
                 fontFamily="medium"
                 style={{ textAlign: 'center', color: '#323131' }}

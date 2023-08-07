@@ -44,7 +44,22 @@ const GridSystem = ({ categoryName, data, component }) => {
         <Row justifyContent="center" style={{ width: '100%', margin: 'auto', marginLeft: '10px' }}>
           {data.map(slide => (
             <Box style={{ width: '40%', margin: '10px' }}>
-              <Link to={slide.url_key}>
+              <Link to={slide.url_key}
+               onClick={()=>{
+                window.dataLayer.push({
+                  event: 'pt_global_click_link_banner_click',
+                  pagetype: '',
+                  source_page_url: window.location.href,
+                  previous_page_url: '',
+                  destination_page_url: slide.url_key,
+                  login_status: '',
+                  user_id: '',
+                  page_url: window.location.href,
+                  banner_id: '',
+                  click_text: slide.title || ""
+                });
+              }}
+              >
                 <Image data-src={slide.image} alt={slide.title} m={5} height="auto" width="100%" />
                 <Text fontSize="10pt" color="label" mt="5px" style={{ textAlign: 'center' }}>
                   {slide.title}
