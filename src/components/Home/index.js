@@ -81,7 +81,22 @@ export class Home extends Component {
     return (
       <Section p="0px">
         {/* <LazyLoad placeholder={<PlaceHolderShimmer />} height={630}> */}
-        <Link to={strip.url_key}>
+        <Link to={strip.url_key}
+        onClick={()=>{
+          window.dataLayer.push({
+            event: 'pt_global_click_link_banner_click',
+            pagetype: '',
+            source_page_url: window.location.href,
+            previous_page_url: '',
+            destination_page_url: strip.url_key||"",
+            login_status: '',
+            user_id: '',
+            page_url: window.location.href,
+            banner_id: '',
+            click_text: ''
+          });
+        }}
+        >
           <div style={{ width: "80%", marginLeft: "10%" }}>
             <img
               data-src={strip.image}
@@ -154,7 +169,22 @@ export class Home extends Component {
             >
               {bestSeat.mainTitle}
             </Heading>
-            <Link to={bestSeat.url_key}>
+            <Link to={bestSeat.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: bestSeat.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: bestSeat.button
+              });
+            }}
+            >
               <Heading
                 fontFamily="medium"
                 style={{
@@ -211,7 +241,22 @@ export class Home extends Component {
           <Div mb="20px">
             {homePageBanners.map((val, index) => (
               <Div m="15px 0px">
-                <Link to={val.url_key}>
+                <Link to={val.url_key}
+                 onClick={()=>{
+                  window.dataLayer.push({
+                    event: 'pt_global_click_link_banner_click',
+                    pagetype: '',
+                    source_page_url: window.location.href,
+                    previous_page_url: '',
+                    destination_page_url: val.url_key,
+                    login_status: '',
+                    user_id: '',
+                    page_url: window.location.href,
+                    banner_id: '',
+                    click_text: ""
+                  });
+                }}
+                >
                   <Image
                     data-src={val.image}
                     src={`${val.image}?blur=30`}
@@ -239,7 +284,22 @@ export class Home extends Component {
             >
               {gifting.mainTitle}
             </Heading>
-            <Link to={gifting.url_key}>
+            <Link to={gifting.url_key}
+             onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: gifting.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: gifting.buttonTitle||""
+              });
+            }}
+            >
               <Heading
                 style={{
                   textAlign: "center",
@@ -286,7 +346,22 @@ export class Home extends Component {
             >
               {togetherInMoment.mainTitle}
             </Heading>
-            <Link to={togetherInMoment.url_key}>
+            <Link to={togetherInMoment.url_key}
+             onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: togetherInMoment.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: togetherInMoment.buttonTitle||""
+              });
+            }}
+            >
               <Heading
                 style={{
                   textAlign: "center",
@@ -337,7 +412,22 @@ export class Home extends Component {
             >
               {TheWayWeAreEntertainingNow.mainTitle}
             </Heading>
-            <Link to={TheWayWeAreEntertainingNow.url_key}>
+            <Link to={TheWayWeAreEntertainingNow.url_key}
+             onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: TheWayWeAreEntertainingNow.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: TheWayWeAreEntertainingNow.buttonTitle||""
+              });
+            }}
+            >
               <Heading
                 style={{
                   textAlign: "center",
@@ -384,7 +474,22 @@ export class Home extends Component {
         {!isLoggedIn ? (
           <LazyLoad placeholder={<PlaceHolderShimmer />} height={128}>
             <Div mt="30px">
-              <Link to={midbanner.url_key}>
+              <Link to={midbanner.url_key}
+               onClick={()=>{
+                window.dataLayer.push({
+                  event: 'pt_global_click_link_banner_click',
+                  pagetype: '',
+                  source_page_url: window.location.href,
+                  previous_page_url: '',
+                  destination_page_url: midbanner.url_key,
+                  login_status: '',
+                  user_id: '',
+                  page_url: window.location.href,
+                  banner_id: '',
+                  click_text: ""
+                });
+              }}
+              >
                 <Image
                   data-src={midbanner.image}
                   src={`${midbanner.image}?blur=30`}
@@ -401,7 +506,22 @@ export class Home extends Component {
         {/* WFH favorites */}
         <LazyLoad placeholder={<PlaceHolderShimmer />} height={457}>
           <Div mt="30px" mb="30px">
-            <Link to={wfhAreBack.url_key}>
+            <Link to={wfhAreBack.url_key}
+             onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: wfhAreBack.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: wfhAreBack.mainTitle||""
+              });
+            }}
+            >
               <Div style={{ position: "relative" }}>
                 <div className="gradient">
                   <Heading
@@ -465,7 +585,22 @@ export class Home extends Component {
             >
               {trendsWeLove1.mainTitle}
             </Heading>
-            <Link to={trendsWeLove1.url_key}>
+            <Link to={trendsWeLove1.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: trendsWeLove1.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: trendsWeLove1.mainTitle||""
+              });
+            }}
+            >
               <Image
                 data-src={trendsWeLove1.image}
                 src={`${trendsWeLove1.image}?blur=30`}
@@ -487,7 +622,22 @@ export class Home extends Component {
             >
               {trendsWeLove2.mainTitle}
             </Heading>
-            <Link to={trendsWeLove2.url_key}>
+            <Link to={trendsWeLove2.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: trendsWeLove2.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: trendsWeLove2.mainTitle||""
+              });
+            }}
+            >
               <Image
                 data-src={trendsWeLove2.image}
                 src={`${trendsWeLove2.image}?blur=30`}
@@ -513,7 +663,22 @@ export class Home extends Component {
             >
               {forYourMasterSuite.mainTitle}
             </Heading>
-            <Link to={forYourMasterSuite.url_key}>
+            <Link to={forYourMasterSuite.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: forYourMasterSuite.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: forYourMasterSuite.mainTitle||""
+              });
+            }}
+            >
               <Heading
                 style={{
                   textAlign: "center",
@@ -573,7 +738,22 @@ export class Home extends Component {
             >
               {ourBeddingFavourites.mainTitle}
             </Heading>
-            <Link to={ourBeddingFavourites.url_key}>
+            <Link to={ourBeddingFavourites.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: ourBeddingFavourites.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: ourBeddingFavourites.mainTitle||""
+              });
+            }}
+            >
               <Heading
                 style={{
                   textAlign: "center",
@@ -657,7 +837,22 @@ export class Home extends Component {
                 pb="5px"
               >
                 <Div style={{ width: "40%" }}>
-                  <Link to={forBetterSleep.data[0].url_key}>
+                  <Link to={forBetterSleep.data[0].url_key}
+                  onClick={()=>{
+                    window.dataLayer.push({
+                      event: 'pt_global_click_link_banner_click',
+                      pagetype: '',
+                      source_page_url: window.location.href,
+                      previous_page_url: '',
+                      destination_page_url: forBetterSleep.data[0].url_key,
+                      login_status: '',
+                      user_id: '',
+                      page_url: window.location.href,
+                      banner_id: '',
+                      click_text: forBetterSleep.data[0].title||""
+                    });
+                  }}
+                  >
                     <Image
                       data-src={forBetterSleep.data[0].image}
                       src={`${forBetterSleep.data[0].image}?blur=30`}
@@ -683,7 +878,22 @@ export class Home extends Component {
                   </Link>
                 </Div>
                 <Div style={{ width: "40%" }}>
-                  <Link to={forBetterSleep.data[1].url_key}>
+                  <Link to={forBetterSleep.data[1].url_key}
+                   onClick={()=>{
+                    window.dataLayer.push({
+                      event: 'pt_global_click_link_banner_click',
+                      pagetype: '',
+                      source_page_url: window.location.href,
+                      previous_page_url: '',
+                      destination_page_url: forBetterSleep.data[1].url_key,
+                      login_status: '',
+                      user_id: '',
+                      page_url: window.location.href,
+                      banner_id: '',
+                      click_text: forBetterSleep.data[1].title||""
+                    });
+                  }}
+                  >
                     <Image
                       data-src={forBetterSleep.data[1].image}
                       src={`${forBetterSleep.data[1].image}?blur=30`}
@@ -711,7 +921,22 @@ export class Home extends Component {
               </Row>
               <Row style={{ display: "flex", justifyContent: "space-between" }}>
                 <Div style={{ width: "40%" }}>
-                  <Link to={forBetterSleep.data[2].url_key}>
+                  <Link to={forBetterSleep.data[2].url_key}
+                   onClick={()=>{
+                    window.dataLayer.push({
+                      event: 'pt_global_click_link_banner_click',
+                      pagetype: '',
+                      source_page_url: window.location.href,
+                      previous_page_url: '',
+                      destination_page_url: forBetterSleep.data[2].url_key,
+                      login_status: '',
+                      user_id: '',
+                      page_url: window.location.href,
+                      banner_id: '',
+                      click_text: forBetterSleep.data[2].title||""
+                    });
+                  }}
+                  >
                     <Image
                       data-src={forBetterSleep.data[2].image}
                       src={`${forBetterSleep.data[2].image}?blur=30`}
@@ -737,7 +962,22 @@ export class Home extends Component {
                   </Link>
                 </Div>
                 <Div style={{ width: "40%" }}>
-                  <Link to={forBetterSleep.data[3].url_key}>
+                  <Link to={forBetterSleep.data[3].url_key}
+                   onClick={()=>{
+                    window.dataLayer.push({
+                      event: 'pt_global_click_link_banner_click',
+                      pagetype: '',
+                      source_page_url: window.location.href,
+                      previous_page_url: '',
+                      destination_page_url: forBetterSleep.data[3].url_key,
+                      login_status: '',
+                      user_id: '',
+                      page_url: window.location.href,
+                      banner_id: '',
+                      click_text: forBetterSleep.data[3].title||""
+                    });
+                  }}
+                  >
                     <Image
                       data-src={forBetterSleep.data[3].image}
                       src={`${forBetterSleep.data[3].image}?blur=30`}
@@ -807,7 +1047,22 @@ export class Home extends Component {
                 marginBottom: "20px"
               }}
             />
-            <Link to={shopOurNewArrivalFurniture.url_key}>
+            <Link to={shopOurNewArrivalFurniture.url_key}
+            onClick={()=>{
+              window.dataLayer.push({
+                event: 'pt_global_click_link_banner_click',
+                pagetype: '',
+                source_page_url: window.location.href,
+                previous_page_url: '',
+                destination_page_url: shopOurNewArrivalFurniture.url_key,
+                login_status: '',
+                user_id: '',
+                page_url: window.location.href,
+                banner_id: '',
+                click_text: shopOurNewArrivalFurniture.mainTitle||""
+              });
+            }}
+            >
               <Image
                 data-src={shopOurNewArrivalFurniture.image}
                 src={`${shopOurNewArrivalFurniture.image}?blur=30`}
@@ -893,6 +1148,20 @@ export class Home extends Component {
                       fontWeight: "bold",
                       fontSize: "12px"
                     }}
+                    onClick={()=>{
+                      window.dataLayer.push({
+                        event: 'pt_global_click_link_banner_click',
+                        pagetype: '',
+                        source_page_url: window.location.href,
+                        previous_page_url: '',
+                        destination_page_url: customiseYourHome.url_key,
+                        login_status: '',
+                        user_id: '',
+                        page_url: window.location.href,
+                        banner_id: '',
+                        click_text: 'KNOW MORE'
+                      });
+                    }}
                   >
                     KNOW MORE
                     <img
@@ -957,6 +1226,20 @@ export class Home extends Component {
                       to={designAndBuild.url_key}
                       target="_blank"
                       style={{ fontWeight: "bold", fontSize: "12px" }}
+                      onClick={()=>{
+                        window.dataLayer.push({
+                          event: 'pt_global_click_link_banner_click',
+                          pagetype: '',
+                          source_page_url: window.location.href,
+                          previous_page_url: '',
+                          destination_page_url: designAndBuild.url_key,
+                          login_status: '',
+                          user_id: '',
+                          page_url: window.location.href,
+                          banner_id: '',
+                          click_text: 'KNOW MORE'
+                        });
+                      }}
                     >
                       KNOW MORE
                       <img

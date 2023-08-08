@@ -24,7 +24,22 @@ class CategoryItem extends React.Component {
     if (url) {
       return (
         <Box variant="section.catSliderItem" height="auto">
-          <Link to={url}>
+          <Link to={url}
+          onClick={()=>{
+            window.dataLayer.push({
+              event: 'pt_global_click_link_banner_click',
+              pagetype: '',
+              source_page_url: window.location.href,
+              previous_page_url: '',
+              destination_page_url: url,
+              login_status: '',
+              user_id: '',
+              page_url: window.location.href,
+              banner_id: '',
+              click_text: name||""
+            });
+          }}
+          >
             {image ? (
               <div style={{ position: "relative" }}>
                 <Image

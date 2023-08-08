@@ -187,7 +187,6 @@ export default class MenuSidebar extends Component {
       logoShow,
       cartSummary
     } = this.props;
-    console.log(this.props);
     const styles = require("./MenuSidebar.scss");
 
     return (

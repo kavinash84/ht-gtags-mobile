@@ -78,7 +78,7 @@ const ShopbyCatItem = ({
             });
           }}
           >
-            hhhhhhhhhhhhh
+            
             <img
               data-src={image}
               src={`${image}?blur=30`}
@@ -139,7 +139,22 @@ const ShopbyCatItem = ({
         styles.extra_padding
       }`}
     >
-      <Link className={styles.link} to={url}>
+      <Link className={styles.link} to={url}
+      onClick={()=>{
+        window.dataLayer.push({
+          event: 'pt_global_click_link_banner_click',
+          pagetype: '',
+          source_page_url: window.location.href,
+          previous_page_url: '',
+          destination_page_url: url,
+          login_status: '',
+          user_id: '',
+          page_url: window.location.href,
+          banner_id: '',
+          click_text: name || ""
+        });
+      }}
+      >
         <Div height="200px" width="auto">
           <img
             data-src={image}

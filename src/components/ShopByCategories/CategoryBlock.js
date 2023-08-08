@@ -17,6 +17,18 @@ class CategoryBlock extends React.Component {
           to={to}
           onClick={() => {
             sessionStorage.setItem('ShopByCatscrollPosition', window.pageYOffset);
+            window.dataLayer.push({
+              event: 'pt_global_click_link_banner_click',
+              pagetype: '',
+              source_page_url: window.location.href,
+              previous_page_url: '',
+              destination_page_url: to||"",
+              login_status: '',
+              user_id: '',
+              page_url: window.location.href,
+              banner_id: '',
+              click_text: title
+            });
           }}
         >
           <Box

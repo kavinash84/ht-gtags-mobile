@@ -11,7 +11,22 @@ class CategoryBlock extends React.Component {
     const { src, title, to, index } = this.props;
     return (
       <Box key={index} style={{ width: "33%" }} height="100%" p="2px" mb="5px">
-        <Link to={to}>
+        <Link to={to}
+         onClick={()=>{
+          window.dataLayer.push({
+            event: 'pt_global_click_link_banner_click',
+            pagetype: '',
+            source_page_url: window.location.href,
+            previous_page_url: '',
+            destination_page_url: to,
+            login_status: '',
+            user_id: '',
+            page_url: window.location.href,
+            banner_id: '',
+            click_text: title||""
+          });
+        }}
+        >
           <Box
             style={{
               display: "flex",

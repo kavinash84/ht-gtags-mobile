@@ -37,7 +37,22 @@ const CategoryItem = ({
       {id === 2 ? <Box bg="#F7F0F0" height="100px" m="-12px" mb="-100px" style={{ width: '115%' }} /> : null}
        
       {url ? (
-        <Link to={url}>
+        <Link to={url}
+        onClick={()=>{
+          window.dataLayer.push({
+            event: 'pt_global_click_link_banner_click',
+            pagetype: '',
+            source_page_url: window.location.href,
+            previous_page_url: '',
+            destination_page_url: url,
+            login_status: '',
+            user_id: '',
+            page_url: window.location.href,
+            banner_id: '',
+            click_text: ""
+          });
+        }}
+        >
         
       {/* Product Image */}
       {image ? (
