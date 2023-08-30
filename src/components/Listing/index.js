@@ -273,6 +273,7 @@ class Listing extends React.Component {
       // if (window && !!window.unbxd && !!window.unbxd.toggleWishList) {
       //   window.unbxd.toggleWishList(sku, simpleSku);
       // }
+      
       addToWaitList(sku, simpleSku, selectedPincode, true);
       const { pathname, search } = history.location;
       if (search) {

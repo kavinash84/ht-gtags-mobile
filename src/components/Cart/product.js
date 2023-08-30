@@ -137,7 +137,7 @@ class ProductItem extends Component {
     return (
       <React.Fragment>
         <div className={styles.productItemContainer}>
-          <Link to={productURL}>
+          {/* <Link to={productURL}> */}
             <div className={styles.product_line}>
               <div className={styles.productImage}>
                 <img data-src={`${Pimage}?mode=fill&h=100`} src={`${Pimage}?blur=30`} alt="product" />
@@ -146,6 +146,7 @@ class ProductItem extends Component {
                 <div className={styles.productname}>{Pname}</div>
                 <div className={styles.productsubname}>
                   <span>By Hometown</span>
+                  --------
                   <img
                     src={Delete}
                     alt="delete"
@@ -217,7 +218,7 @@ class ProductItem extends Component {
                 </div>
               </div>
             </div>
-          </Link>
+          {/* </Link> */}
           <div className={styles.productdetails}>
             <div style={{ marginRight: '5px' }}>
               <div

@@ -96,6 +96,50 @@ export default class Cart extends Component {
       dispatch(WEViewCart());
     }
     window.scroll(0, 0);
+
+   console.log('view_cart')
+    window.dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
+    window.dataLayer.push({
+  "event": "view_cart",
+ "pagetype": "",
+  'source_page_url': window.location.href,
+  'previous_page_url': "",
+  'destination_page_url': "",
+  'login_status': "",
+  'user_id': "",
+  'page_url': window.location.href,
+  'banner_id': "",
+  'click_text': "",
+  ecommerce: {
+  currency: "INR",
+  value: this.props.summary.total,
+  items: this.props.results.map((result,idx)=>{
+    return  {
+      item_id: result.product_info.product_id,
+      item_name: result.product_info.name,
+      affiliation: "",
+      coupon: result.coupon_code,
+      discount: result.product_info.discount,
+      index: idx,
+      item_brand: result.product_info.brand,
+      item_category: "",
+      item_category2: "",
+      item_category3: "",
+      item_category4: "",
+      item_category5: "",
+      item_list_id: "",
+      item_list_name: "",
+      item_variant: result.product_info.color,
+      location_id: "",
+      price: result.product_info.net_price,
+      quantity: result.qty
+      };
+  })
+}
+ });
+
+    
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -167,45 +211,47 @@ export default class Cart extends Component {
     } = this.props;
     const { responsiveModalContent, open, displayCart } = this.state;
 
-    window.dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
-    window.dataLayer.push({
-  "event": "view_cart",
- "pagetype": "",
-  'source_page_url': window.location.href,
-  'previous_page_url': "",
-  'destination_page_url': "",
-  'login_status': "",
-  'user_id': "",
-  'page_url': window.location.href,
-  'banner_id': "",
-  'click_text': "",
-  ecommerce: {
-  currency: "INR",
-  value: this.props.summary.total,
-  items: this.props.results.map((result,idx)=>{
-    return  {
-      item_id: result.product_info.product_id,
-      item_name: result.product_info.name,
-      affiliation: "",
-      coupon: result.coupon_code,
-      discount: result.product_info.discount,
-      index: idx,
-      item_brand: result.product_info.brand,
-      item_category: "",
-      item_category2: "",
-      item_category3: "",
-      item_category4: "",
-      item_category5: "",
-      item_list_id: "",
-      item_list_name: "",
-      item_variant: result.product_info.color,
-      location_id: "",
-      price: result.product_info.net_price,
-      quantity: result.qty
-      };
-  })
-}
- });
+    
+
+//     window.dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
+//     window.dataLayer.push({
+//   "event": "view_cart",
+//  "pagetype": "",
+//   'source_page_url': window.location.href,
+//   'previous_page_url': "",
+//   'destination_page_url': "",
+//   'login_status': "",
+//   'user_id': "",
+//   'page_url': window.location.href,
+//   'banner_id': "",
+//   'click_text': "",
+//   ecommerce: {
+//   currency: "INR",
+//   value: this.props.summary.total,
+//   items: this.props.results.map((result,idx)=>{
+//     return  {
+//       item_id: result.product_info.product_id,
+//       item_name: result.product_info.name,
+//       affiliation: "",
+//       coupon: result.coupon_code,
+//       discount: result.product_info.discount,
+//       index: idx,
+//       item_brand: result.product_info.brand,
+//       item_category: "",
+//       item_category2: "",
+//       item_category3: "",
+//       item_category4: "",
+//       item_category5: "",
+//       item_list_id: "",
+//       item_list_name: "",
+//       item_variant: result.product_info.color,
+//       location_id: "",
+//       price: result.product_info.net_price,
+//       quantity: result.qty
+//       };
+//   })
+// }
+//  });
 
     const productIds =
       Array.isArray(results) && results.length

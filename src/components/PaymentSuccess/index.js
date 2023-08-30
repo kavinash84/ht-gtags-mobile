@@ -64,7 +64,7 @@ const PaymentSuccess = ({
           item_name: product.name,
           affiliation: "",
           coupon: "",
-          discount: discount,
+          discount: "",
           index: index,
           item_brand: product.brand,
           item_category: "",

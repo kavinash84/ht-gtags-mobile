@@ -325,9 +325,21 @@ export default class MenuSidebar extends Component {
                   }
                    });
 
+                   
+
+
                 }}
                 >
-                  <Img src={CartIcon} alt="Cart" height="22px" width="22px" />
+                  <Img src={CartIcon} alt="Cart" height="22px" width="22px"
+                  onClick={(e)=>{
+
+                    // console.log('view_cart')
+                    // console.log(e)
+                    // console.log(this.props);
+
+                    
+                  }}
+                   />
                   <span className={styles.count}>{cartCount}</span>
                 </Link>
                 <a className={styles.cart} href="tel:08069252525">
